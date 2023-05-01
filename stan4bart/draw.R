@@ -13,7 +13,7 @@ dat_raw <- readr::read_csv('data/classroom.csv') %>%
 
 
 ####Start Function####
-satt_function <- function(group_vars = c("schoolid"), random_slope = TRUE, sd1 = 1, sd2 = 2, cov1 = 0.3, cov2 = 0.2){
+draw_dat <- function(group_vars = c("schoolid"), tau = .2, random_slope = TRUE, sd1 = 1, sd2 = 2, cov1 = 0.3, cov2 = 0.2){
   
   ####Set Up for Creation of Response Surfaces####
   # filter out groups and save for later
@@ -298,6 +298,10 @@ satt_function <- function(group_vars = c("schoolid"), random_slope = TRUE, sd1 =
            y0 = yc0) %>% 
     mutate(across(c(group_vars), ~as.factor(.)))
   
+  ####Create ID for linkage####
+  datA$ID <- 1:nrow(datA)
+  datB$ID <- 1:nrow(datB)
+  datC$ID <- 1:nrow(datC)
   
   ####Calculate estimands####
   ##SATT
@@ -306,9 +310,13 @@ satt_function <- function(group_vars = c("schoolid"), random_slope = TRUE, sd1 =
   datC_satt <- mean(datC$y1[z == 1] - datC$y0[z == 1])  
   
   ## ICATT
-  datA_icatt <- datA$y1[z == 1] - datA$y0[z == 1]
-  datB_icatt <- datB$y1[z == 1] - datB$y0[z == 1]
-  datC_icatt <- datC$y1[z == 1] - datC$y0[z == 1]
+  datA_icate <- datA$y1 - datA$y0
+  datA_icatt <- data.frame(icatt = datA_icate, ID = datA$ID)[datA$z == 1,]
+  datB_icate <- datB$y1 - datB$y0
+  datB_icatt <- data.frame(icatt = datB_icate, ID = datB$ID)[datB$z == 1,]
+  datC_icate <- datC$y1 - datC$y0
+  datC_icatt <- data.frame(icatt = datC_icate, ID = datC$ID)[datC$z == 1,]
+  
   
   
   ## GSATT
@@ -320,30 +328,23 @@ satt_function <- function(group_vars = c("schoolid"), random_slope = TRUE, sd1 =
   datC_gsatt <- data.frame(gsatt = datC_gsatt, schoolid = names(datC_gsatt))
   
   
-  satt_results <- data.frame(response_group = c("A", "B", "C"),
-                             SATT = c(datA_satt, datB_satt, datC_satt))
-  
-  icatt_results <- data.frame(response_group = c(rep("A", length(datA_icatt)), 
-                                                 rep("B", length(datB_icatt)),
-                                                 rep("C", length(datC_icatt))),
-                              ICATT = c(datA_icatt, datB_icatt, datC_icatt))
-  
-  gsatt_results <- data.frame(response_group = c(rep("A", nrow(datA_gsatt)), 
-                                                 rep("B", nrow(datB_gsatt)),
-                                                 rep("C", nrow(datC_gsatt))),
-                              GSATT = rbind(datA_gsatt, datB_gsatt, datC_gsatt))
-  
-  
   datA <- datA %>% dplyr::select(-y1, -y0)
   datB <- datB %>% dplyr::select(-y1, -y0)
   datC <- datC %>% dplyr::select(-y1, -y0)
   
-  out <- list("True SATT" = satt_results,
-                          "True ICATT" = icatt_results, 
-                          "True GSATT" = gsatt_results, 
-                          "Linear Response Surface" = datA,
-                          "Non-Linear Response Surface" = datB,
-                          "Non-Linear Response Surface w/ Interactions" = datC)
+  out <- list(
+    'sattA' = datA_satt,
+    'sattB' = datB_satt,
+    'sattC' = datC_satt,
+    'gsattA' = datA_gsatt, 
+    'gsattB' = datB_gsatt, 
+    'gsattC' = datC_gsatt, 
+    'icattA' = datA_icatt, 
+    'icattB' = datB_icatt, 
+    'icattC' = datC_icatt, 
+    "worldA" = datA,
+    "worldB" = datB,
+    "worldC" = datC)
   
   return(out)
 }
