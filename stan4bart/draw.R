@@ -14,7 +14,6 @@ dat_raw <- readr::read_csv('data/classroom.csv') %>%
 
 ####Start Function####
 draw_dat <- function(group_vars = c("schoolid"), tau = .2, random_slope = TRUE, sd1 = 1, sd2 = 2, cov1 = 0.3, cov2 = 0.2){
-  
   ####Set Up for Creation of Response Surfaces####
   # filter out groups and save for later
   grp_names <- group_vars
@@ -170,7 +169,7 @@ draw_dat <- function(group_vars = c("schoolid"), tau = .2, random_slope = TRUE, 
   group_error_full <- 
     groups %>% 
     dplyr::select(all_of(group_vars)) %>% 
-    left_join(group_error_final, by = group_vars)
+    left_join(group_error_final, by = all_of(group_vars))
   
   if(random_slope == TRUE){
     ya1.hat <- ya1.hat + group_error_full$zeta + group_error_full$rand_slope
@@ -195,7 +194,7 @@ draw_dat <- function(group_vars = c("schoolid"), tau = .2, random_slope = TRUE, 
     rename(y = ya, 
            y1 = ya1, 
            y0 = ya0) %>% 
-    mutate(across(c(group_vars), ~as.factor(.)))
+    mutate(across(all_of(group_vars), ~as.factor(.)))
   
   ##Non-Linear Response Surface
   Xquad <- 
@@ -248,7 +247,7 @@ draw_dat <- function(group_vars = c("schoolid"), tau = .2, random_slope = TRUE, 
     rename(y = yb, 
            y1 = yb1, 
            y0 = yb0) %>% 
-    mutate(across(c(group_vars), ~as.factor(.)))
+    mutate(across(all_of(group_vars), ~as.factor(.)))
   
   ##Non-Linear Response Surface w/ Interactions
   ytmp = rnorm(nrow(X))
@@ -296,7 +295,7 @@ draw_dat <- function(group_vars = c("schoolid"), tau = .2, random_slope = TRUE, 
     rename(y = yc, 
            y1 = yc1, 
            y0 = yc0) %>% 
-    mutate(across(c(group_vars), ~as.factor(.)))
+    mutate(across(all_of(group_vars), ~as.factor(.)))
   
   ####Create ID for linkage####
   datA$ID <- 1:nrow(datA)
@@ -305,9 +304,9 @@ draw_dat <- function(group_vars = c("schoolid"), tau = .2, random_slope = TRUE, 
   
   ####Calculate estimands####
   ##SATT
-  datA_satt <- mean(datA$y1[z == 1] - datA$y0[z == 1])
-  datB_satt <- mean(datB$y1[z == 1] - datB$y0[z == 1])
-  datC_satt <- mean(datC$y1[z == 1] - datC$y0[z == 1])  
+  datA_satt <- data.frame(satt = mean(datA$y1[z == 1] - datA$y0[z == 1]))
+  datB_satt <- data.frame(satt = mean(datB$y1[z == 1] - datB$y0[z == 1]))
+  datC_satt <- data.frame(satt = mean(datC$y1[z == 1] - datC$y0[z == 1]))
   
   ## ICATT
   datA_icate <- datA$y1 - datA$y0
@@ -332,19 +331,29 @@ draw_dat <- function(group_vars = c("schoolid"), tau = .2, random_slope = TRUE, 
   datB <- datB %>% dplyr::select(-y1, -y0)
   datC <- datC %>% dplyr::select(-y1, -y0)
   
-  out <- list(
-    'sattA' = datA_satt,
-    'sattB' = datB_satt,
-    'sattC' = datC_satt,
-    'gsattA' = datA_gsatt, 
-    'gsattB' = datB_gsatt, 
-    'gsattC' = datC_gsatt, 
-    'icattA' = datA_icatt, 
-    'icattB' = datB_icatt, 
-    'icattC' = datC_icatt, 
-    "worldA" = datA,
-    "worldB" = datB,
-    "worldC" = datC)
+  worldA <- list(
+    'data' = datA,
+    'satt' = datA_satt, 
+    'gsatt' = datA_gsatt, 
+    'icatt' = datA_icatt
+  )
+  
+  worldB <- list(
+    'data' = datB,
+    'satt' = datB_satt, 
+    'gsatt' = datB_gsatt, 
+    'icatt' = datB_icatt
+  )
+  
+  worldC <- list(
+    'data' = datC,
+    'satt' = datC_satt, 
+    'gsatt' = datC_gsatt, 
+    'icatt' = datC_icatt
+  )
+  
+  out <- list('worldA' = worldA, 'worldB' = worldB, 'worldC' = worldC)
+  
   
   return(out)
 }
