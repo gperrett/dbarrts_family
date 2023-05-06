@@ -4,6 +4,7 @@ library(stan4bart)
 setwd('~/Dropbox/dbarts_family/stan4bart/')
 source('draw.R')
 source('pull_estimates.R')
+source('pull_convergence .R')
 
 sim <- draw_dat()
 
