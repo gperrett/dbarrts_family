@@ -1,7 +1,6 @@
 library(stan4bart)
 `%notin%` <- Negate(`%in%`)
 
-setwd('~/Dropbox/dbarts_family/stan4bart/')
 source('draw.R')
 source('pull_estimates.R')
 source('pull_convergence .R')
