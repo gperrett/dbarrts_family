@@ -9,13 +9,11 @@ pull_convergence <- function(fit){
   trt <- fit$frame$z
   
   samples.ite <- (fit$frame$y - ppd.cf) * (2 * trt - 1)
-  
   samples.ite <- samples.ite[trt == 1,,]
-  
   rhat <- rstan::monitor(
     array(
       apply(samples.ite, c(2, 3), mean), 
-      dim = c(2000, 10, 1)),
+      dim = c(fit$call$iter/2, fit$call$chains, 1)),
     warmup = 0)
   
   rhat$model <- model
@@ -23,3 +21,4 @@ pull_convergence <- function(fit){
   return(rhat)
   
 }
+
