@@ -1,0 +1,216 @@
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 0.7 0.9 1.1  0.9 0.1  1.01     1091     9767
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 0.6 0.9 1.1  0.9 0.1  1.01      568     9080
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 0.7 0.9 1.1  0.9 0.1  1.03      244     1196
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 0.7 0.9 1.1  0.9 0.1  1.02      373     3305
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 0.6 0.8   1  0.8 0.1     1     3694    13310
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 0.7 0.9 1.1  0.9 0.1  1.03      241     1363
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 0.7 0.9 1.1  0.9 0.1  1.02      646     4642
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 0.7 0.9 1.1  0.9 0.1  1.02      497     5866
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 1.2 1.5 1.7  1.5 0.1  1.11       58      358
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 1.4 1.6 1.8  1.6 0.1  1.05      116      817
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 1.3 1.5 1.8  1.5 0.2  1.13       49      121
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 1.3 1.5 1.8  1.5 0.1  1.14       46      148
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 1.4 1.7 1.9  1.7 0.1  1.13       48      117
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 1.3 1.6 1.8  1.6 0.1   1.1       59      244
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 1.3 1.5 1.8  1.5 0.1  1.14       46      109
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 1.3 1.5 1.7  1.5 0.1  1.08       77      350
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 1.9 2.2 2.5  2.2 0.2  1.17       39       67
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 1.9 2.3 2.7  2.3 0.2  1.35       22       95
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 1.9 2.2 2.5  2.2 0.2  1.19       36       82
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+   Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1  2 2.3 2.6  2.3 0.2  1.12       52      276
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 1.8 2.2 2.5  2.2 0.2  1.25       28      133
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 1.9 2.2 2.6  2.2 0.2  1.19       35      111
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+   Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1  2 2.3 2.6  2.3 0.2  1.18       37      109
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
+Inference for the input samples (10 chains: each with iter = 2000; warmup = 0):
+
+    Q5 Q50 Q95 Mean  SD  Rhat Bulk_ESS Tail_ESS
+V1 1.7 2.1 2.4  2.1 0.2  1.31       25       95
+
+For each parameter, Bulk_ESS and Tail_ESS are crude measures of 
+effective sample size for bulk and tail quantities respectively (an ESS > 100 
+per chain is considered good), and Rhat is the potential scale reduction 
+factor on rank normalized split chains (at convergence, Rhat <= 1.05).
