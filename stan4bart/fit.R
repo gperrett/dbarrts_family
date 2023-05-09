@@ -26,13 +26,13 @@ results <- lapply(worlds, function(world){
   )
   
   
-  sim[[world]][["satt"]] <<- cbind(sim[[world]][["satt"]], pull_estimates(fit = m1)[['satt_est']])
+  sim[[world]][["satt"]] <- cbind(sim[[world]][["satt"]], pull_estimates(fit = m1)[['satt_est']])
   
-  sim[[world]][["gsatt"]] <<- merge(sim[[world]][["gsatt"]], pull_estimates(fit = m1)[['gsatt_est']])
+  sim[[world]][["gsatt"]] <- merge(sim[[world]][["gsatt"]], pull_estimates(fit = m1)[['gsatt_est']])
   
-  sim[[world]][["icatt"]] <<- merge(sim[[world]][["icatt"]], pull_estimates(fit = m1)[['icatt_est']])
+  sim[[world]][["icatt"]] <- merge(sim[[world]][["icatt"]], pull_estimates(fit = m1)[['icatt_est']])
   
-  sim[[world]][['rhat']] <<- rbind(sim[[world]][['rhat']], 
+  sim[[world]][['rhat']] <- rbind(sim[[world]][['rhat']], 
                                      pull_convergence(fit = m1))
   
   rm(m2)
@@ -45,14 +45,14 @@ results <- lapply(worlds, function(world){
                              iter = 4000
   )
   
-  sim[[world]][["satt"]] <<- cbind(sim[[world]][["satt"]], pull_estimates(fit = m2)[['satt_est']])
+  sim[[world]][["satt"]] <- cbind(sim[[world]][["satt"]], pull_estimates(fit = m2)[['satt_est']])
   
-  sim[[world]][["gsatt"]] <<- merge(sim[[world]][["gsatt"]], pull_estimates(fit = m1)[['gsatt_est']])
+  sim[[world]][["gsatt"]] <- merge(sim[[world]][["gsatt"]], pull_estimates(fit = m1)[['gsatt_est']])
   
-  sim[[world]][["icatt"]] <<- merge(sim[[world]][["icatt"]], pull_estimates(fit = m1)[['icatt_est']])
+  sim[[world]][["icatt"]] <- merge(sim[[world]][["icatt"]], pull_estimates(fit = m1)[['icatt_est']])
   
   
-  sim[[world]][['rhat']] <<- rbind(sim[[world]][['rhat']], 
+  sim[[world]][['rhat']] <- rbind(sim[[world]][['rhat']], 
                                      pull_convergence(fit = m2))
   
   
@@ -66,13 +66,13 @@ results <- lapply(worlds, function(world){
                              iter = 4000
   )
   
-  sim[[world]][["satt"]] <<- cbind(sim[[world]][["satt"]], pull_estimates(fit = m3)[['satt_est']])
+  sim[[world]][["satt"]] <- cbind(sim[[world]][["satt"]], pull_estimates(fit = m3)[['satt_est']])
   
-  sim[[world]][["gsatt"]] <<- merge(sim[[world]][["gsatt"]], pull_estimates(fit = m1)[['gsatt_est']])
+  sim[[world]][["gsatt"]] <- merge(sim[[world]][["gsatt"]], pull_estimates(fit = m1)[['gsatt_est']])
   
-  sim[[world]][["icatt"]] <<- merge(sim[[world]][["icatt"]], pull_estimates(fit = m1)[['icatt_est']])
+  sim[[world]][["icatt"]] <- merge(sim[[world]][["icatt"]], pull_estimates(fit = m1)[['icatt_est']])
   
-  sim[[world]][['rhat']] <<- rbind(sim[[world]][['rhat']], 
+  sim[[world]][['rhat']] <- rbind(sim[[world]][['rhat']], 
                                      pull_convergence(fit = m3))
   
   
@@ -86,13 +86,13 @@ results <- lapply(worlds, function(world){
                              iter = 4000
   )
   
-  sim[[world]][["satt"]] <<- cbind(sim[[world]][["satt"]], pull_estimates(fit = m4)[['satt_est']])
+  sim[[world]][["satt"]] <- cbind(sim[[world]][["satt"]], pull_estimates(fit = m4)[['satt_est']])
   
-  sim[[world]][["gsatt"]] <<- merge(sim[[world]][["gsatt"]], pull_estimates(fit = m1)[['gsatt_est']])
+  sim[[world]][["gsatt"]] <- merge(sim[[world]][["gsatt"]], pull_estimates(fit = m1)[['gsatt_est']])
   
-  sim[[world]][["icatt"]] <<- merge(sim[[world]][["icatt"]], pull_estimates(fit = m1)[['icatt_est']])
+  sim[[world]][["icatt"]] <- merge(sim[[world]][["icatt"]], pull_estimates(fit = m1)[['icatt_est']])
   
-  sim[[world]][['rhat']] <<- rbind(sim[[world]][['rhat']], 
+  sim[[world]][['rhat']] <- rbind(sim[[world]][['rhat']], 
                                      pull_convergence(fit = m4))
   
   rm(m4)
@@ -105,13 +105,13 @@ results <- lapply(worlds, function(world){
                              iter = 4000
   )
   
-  sim[[world]][["satt"]] <<- cbind(sim[[world]][["satt"]], pull_estimates(fit = m5)[['satt_est']])
+  sim[[world]][["satt"]] <- cbind(sim[[world]][["satt"]], pull_estimates(fit = m5)[['satt_est']])
   
-  sim[[world]][["gsatt"]] <<- merge(sim[[world]][["gsatt"]], pull_estimates(fit = m1)[['gsatt_est']])
+  sim[[world]][["gsatt"]] <- merge(sim[[world]][["gsatt"]], pull_estimates(fit = m1)[['gsatt_est']])
   
-  sim[[world]][["icatt"]] <<- merge(sim[[world]][["icatt"]], pull_estimates(fit = m1)[['icatt_est']])
+  sim[[world]][["icatt"]] <- merge(sim[[world]][["icatt"]], pull_estimates(fit = m1)[['icatt_est']])
   
-  sim[[world]][['rhat']] <<- rbind(sim[[world]][['rhat']], 
+  sim[[world]][['rhat']] <- rbind(sim[[world]][['rhat']], 
                                      pull_convergence(fit = m5))
   
   
@@ -125,13 +125,13 @@ results <- lapply(worlds, function(world){
                              iter = 4000
   )
   
-  sim[[world]][["satt"]] <<- cbind(sim[[world]][["satt"]], pull_estimates(fit = m6)[['satt_est']])
+  sim[[world]][["satt"]] <- cbind(sim[[world]][["satt"]], pull_estimates(fit = m6)[['satt_est']])
   
-  sim[[world]][["gsatt"]] <<- merge(sim[[world]][["gsatt"]], pull_estimates(fit = m1)[['gsatt_est']])
+  sim[[world]][["gsatt"]] <- merge(sim[[world]][["gsatt"]], pull_estimates(fit = m1)[['gsatt_est']])
   
-  sim[[world]][["icatt"]] <<- merge(sim[[world]][["icatt"]], pull_estimates(fit = m1)[['icatt_est']])
+  sim[[world]][["icatt"]] <- merge(sim[[world]][["icatt"]], pull_estimates(fit = m1)[['icatt_est']])
   
-  sim[[world]][['rhat']] <<- rbind(sim[[world]][['rhat']], 
+  sim[[world]][['rhat']] <- rbind(sim[[world]][['rhat']], 
                                      pull_convergence(fit = m6))
   
   rm(m6)
@@ -144,13 +144,13 @@ results <- lapply(worlds, function(world){
                              iter = 4000
   )
   
-  sim[[world]][["satt"]] <<- cbind(sim[[world]][["satt"]], pull_estimates(fit = m7)[['satt_est']])
+  sim[[world]][["satt"]] <- cbind(sim[[world]][["satt"]], pull_estimates(fit = m7)[['satt_est']])
   
-  sim[[world]][["gsatt"]] <<- merge(sim[[world]][["gsatt"]], pull_estimates(fit = m1)[['gsatt_est']])
+  sim[[world]][["gsatt"]] <- merge(sim[[world]][["gsatt"]], pull_estimates(fit = m1)[['gsatt_est']])
   
-  sim[[world]][["icatt"]] <<- merge(sim[[world]][["icatt"]], pull_estimates(fit = m1)[['icatt_est']])
+  sim[[world]][["icatt"]] <- merge(sim[[world]][["icatt"]], pull_estimates(fit = m1)[['icatt_est']])
   
-  sim[[world]][['rhat']] <<- rbind(sim[[world]][['rhat']], 
+  sim[[world]][['rhat']] <- rbind(sim[[world]][['rhat']], 
                                      pull_convergence(fit = m7))
   
   rm(m7)
@@ -164,14 +164,16 @@ results <- lapply(worlds, function(world){
                              iter = 4000
   )
   
-  sim[[world]][["satt"]] <<- cbind(sim[[world]][["satt"]], pull_estimates(fit = m8)[['satt_est']])
+  sim[[world]][["satt"]] <- cbind(sim[[world]][["satt"]], pull_estimates(fit = m8)[['satt_est']])
   
-  sim[[world]][["gsatt"]] <<- merge(sim[[world]][["gsatt"]], pull_estimates(fit = m1)[['gsatt_est']])
+  sim[[world]][["gsatt"]] <- merge(sim[[world]][["gsatt"]], pull_estimates(fit = m1)[['gsatt_est']])
   
-  sim[[world]][["icatt"]] <<- merge(sim[[world]][["icatt"]], pull_estimates(fit = m1)[['icatt_est']])
+  sim[[world]][["icatt"]] <- merge(sim[[world]][["icatt"]], pull_estimates(fit = m1)[['icatt_est']])
   
-  sim[[world]][['rhat']] <<- rbind(sim[[world]][['rhat']], 
+  sim[[world]][['rhat']] <- rbind(sim[[world]][['rhat']], 
                                      pull_convergence(fit = m8))
+  
+  return(sim)
 
 
 })
