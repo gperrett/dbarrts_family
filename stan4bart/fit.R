@@ -1,7 +1,6 @@
 library(stan4bart)
 `%notin%` <- Negate(`%in%`)
 
-setwd('~/Dropbox/dbarts_family/stan4bart/')
 source('draw.R')
 source('pull_estimates.R')
 source('pull_convergence .R')
@@ -15,8 +14,7 @@ sim <- draw_dat()
 
 worlds <- c('worldA', 'worldB', 'worldC')
 
-results <- lapply(worlds, function(world){
-
+for (world in worlds) {
     m1 <- stan4bart::stan4bart(y ~ bart(. -schoolid -ID) + (1|schoolid),
                              data = sim[[world]][["data"]],
                              treatment = z,
@@ -173,13 +171,12 @@ results <- lapply(worlds, function(world){
   sim[[world]][['rhat']] <- rbind(sim[[world]][['rhat']], 
                                      pull_convergence(fit = m8))
   
-  return(sim)
+
+}
 
 
-})
+write_rds(sim, glue::glue('results/results_iter{iteration}.rds'), compress = 'gz')
 
-
-write_rds(results, glue::glue('results/results_iter{iteration}.rds'), compress = 'gz')
 
 
 
